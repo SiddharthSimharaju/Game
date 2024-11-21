@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    font-family: sans-serif;
+  }
+  
+  .game {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    border: 2px solid #000;
+    overflow: hidden;
+  }
+  
+  #dino {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    width: 40px;
+    height: 40px;
+    background-image: url('Logo.svg'); /* Assuming dino.svg is in the same folder */
+    background-size: contain; /* Ensures the SVG scales properly */
+    background-repeat: no-repeat; /* Prevents the SVG from repeating */
+  }
+  
+  #cactus {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 40px;
+    background-color: #555;
+    animation: moveCactus 2s infinite linear;
+  }
+  
+  @keyframes moveCactus {
+    0% {
+      right: -20px;
+    }
+    100% {
+      right: 100%;
+    }
+  }
+  
